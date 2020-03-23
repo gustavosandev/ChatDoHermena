@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+		<title>ChatHermena</title>
+		<meta charset="utf-8">
+		<!-- Caminho do ícone -->
+		<link rel="icon" sizes="192x192" href="icon.png"> 
+		<!-- Hack para IOS - não testado -->
+		<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+		<!-- fim hack -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<!-- Tema que abrange a barra de endereço -->
+		<meta name="theme-color" content="#25EDFF">
+		<!-- Melhora o ranking acessibilidade -->
+		<meta name="Description" content="Chat Hermena">	
+		<!-- Nossos códigos javascript -->
+		<script src="index.js" defer></script>
+		<!-- Caminho do nosso manifest, onde criamos nossas regras -->
+		<link rel="manifest" crossorigin="use-credentials" href="manifest.json">	
+  </head>
+  <body>
+  	<header>
+  		<nav class="navbar navbar-expand-lg navbar-light menu">
+		  <a class="navbar-brand" href="#">
+		    <img src="icon.png" width="35" height="35" alt="icone">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="https://gustavosandev.github.io/dbusao/index.html">DBusao</a>
+		      </li>
+		      <li class="nav-item ">
+		        <a class="nav-link" href="#">Link 2 </a>
+		      </li>
+		  </div>
+		</nav>
+  	</header>
+    <section class="container-fluid ">
+    	<div class="container altura-div">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<h3 class="bg-dark text-white text-center my-1 py-1">Chat do Hermena</h3>
+    	    	</div>
+    	    </div>
+    	    <div class="row">
+    			<div class="col-md-12">
+    				<div class="card">
+    				   <ul id="messages"></ul>
+    				</div>
+    	    	</div>
+    	    </div>
+    	    <form class="form-group">
+    	    <div class="row p-1 my-1">
+    	    	<div class="col">
+	    			<textarea rows="4" type="text" id="text-message" name="enviar" class="form-control" placeholder="Digite aqui a sua mensagem.."></textarea>
+	    		</div>
+	    	</div>
+	    	<div class="row p-1 ">
+    	    	<div class="col">
+    	    		<button id="enviar" type="submit" class="btn-secondary form-control">Enviar</button>
+	    	    </div>
+    	    </div>
+    	    </form>
+    	    
+    	 <!-- Aqui é o nosso botão para baixar o app -->
+            <div class="row">
+	        	<div class="col text-center">
+	        		<button type="submit"  class="add-button text-center">Baixe agora.</button>
+	        	</div>
+	        </div>
+    	</div>   
+    </section>
+    <footer class="fixed-bottom">
+    	<div class="container-fluid">
+    		<div class="row footer-color py-1">
+    			<div class="col">
+    				<h6 class="text-center text-white">Gustavo San Martins</h6>
+    				<h6 class="text-center text-white">2020</h6>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>	
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyCyU29aUEAh8gRy5yzDv0bo6qOJ1pRzuu0",
+	    authDomain: "chathermena.firebaseapp.com",
+	    databaseURL: "https://chathermena.firebaseio.com",
+	    projectId: "chathermena",
+	    storageBucket: "chathermena.appspot.com",
+	    messagingSenderId: "158101185640",
+	    appId: "1:158101185640:web:cceb949321458f470487dd"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+
+
+
+    //////////////////
+    var message = firebase.database().ref('message');
+    message.on('child_added', function(data){
+    	$('#messages').append('<li>' + data.val().body + '</li>');
+    })
+
+    $('form').on('submit', function(){
+    	message.push().set({ body: $('#text-message').val() });
+    	$('#text-message').val('');
+    })
+
+
+
+
+/*
+    firebaseConfig.on('child_added', function(snapshot) {
+        var data = snapshot.val();
+        $('#messages').append($('<li>').text(data.message));
+    });
+    
+    $('#enviar').click(function () {
+        var message = $('#text-message').val();
+        firebaseConfig.push({ message: message });
+        $('#text-message').val("");
+    });
+*/
+    
+
+	</script>
+  </body>
+</html>
