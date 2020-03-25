@@ -18,7 +18,7 @@ self.addEventListener('install', function(e) {
         './estilo.css',
         './index.js',
         './manifest.json',
-        './bootstrap.min.css',
+        //'./bootstrap.min.css',
      ]);
    })
  );

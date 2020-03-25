@@ -1,21 +1,35 @@
 @media all and (display-mode: fullscreen) {
   body {
-    margin: 0;
-    border: 5px solid black;
-    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
+
 }
+
+
+main {
+   flex: 1 0 auto;
+}
+
 
 /* rosa #FF40AE
 azul #25EDFF
 azul escuro #09A4B3
 pastel #CCB30A
 */
+.borda{
+  	border-radius: 3px;
+  }
+
+
+
+
 .altura-div{
-  min-height: 80vw;
+  min-height: 130vw;
 }
 .altura-minima{
-  min-height: 90vw;
+  min-height: 80vw;
 }
 
 .container-fluid{
@@ -33,7 +47,10 @@ pastel #CCB30A
 .verde{
   background-color: #00CC0E;
 }
-.footer-color{
+.pretoFraco{
+	background-color: #242526;
+}
+.preto{
 	background-color: black;
 }
 footer{
@@ -44,4 +61,30 @@ footer{
   position: absolute;
   top: 1px;
   left: 1px;
+}
+.marginButton{
+
+	margin-top: 1.6rem;
+}
+.marginButton2{
+
+	margin-bottom: 1.4rem;
+}
+#scroll{
+	overflow-y: scroll;
+    height: 230px;
+    resize: none;
+    transform-origin: 50% 50%; 
+    transform: rotate(180deg); 
+    direction: rtl;
+    text-align: left;
+}
+
+#messages{
+	transform: rotate(180deg);
+
+}
+#fontB{
+	
+	font-weight: bold;
 }

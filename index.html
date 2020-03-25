@@ -11,8 +11,20 @@
 		<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
 		<!-- fim hack -->
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">-->
+
+		<!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">	 
+
+	    <!-- Minha folha de estilo-->
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 		<!-- Tema que abrange a barra de endereço -->
 		<meta name="theme-color" content="#25EDFF">
@@ -25,81 +37,74 @@
   </head>
   <body>
   	<header>
-  		<nav class="navbar navbar-expand-lg navbar-light menu">
-		  <a class="navbar-brand" href="#">
-		    <img src="icon.png" width="35" height="35" alt="icone">
-		  </a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item active">
-		        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="https://gustavosandev.github.io/dbusao/index.html">DBusao</a>
-		      </li>
-		      <li class="nav-item ">
-		        <a class="nav-link" href="#">Link 2 </a>
-		      </li>
-		  </div>
-		</nav>
+		<nav>
+		    <div class="nav-wrapper preto">
+		      <a href="#" class="brand-logo center">
+		      	<img src="icon.png" width="35" height="35" alt="icone">
+		      </a>
+		      <ul id="nav-mobile" class="left hide-on-med-and-down">
+		        <li><a href="https://gustavosandev.github.io/dbusao/index.html">DBusão</a></li>
+		      </ul>
+		    </div>
+		 </nav>
   	</header>
-    <section class="container-fluid ">
-    	<div class="container altura-div">
+    <main class="container">
     		<div class="row">
-    			<div class="col-md-12">
-    				<h3 class="bg-dark text-white text-center my-1 py-1">Chat do Hermena</h3>
+    			<div class="col s12">
+    				<h3 id="fontB">Chat do Hermena</h3>
     	    	</div>
     	    </div>
     	    <div class="row">
-    			<div class="col-md-12">
-    				<div class="card">
-    				   <ul id="messages"></ul>
-    				</div>
-    	    	</div>
+    			<div class="col s12">
+    				<div id="scroll">
+                       <ul class="collection" id="messages">
+				      
+				       </ul>
+				    </div>
     	    </div>
-    	    <form class="form-group">
-    	    <div class="row p-1 my-1">
-    	    	<div class="col">
-	    			<textarea rows="4" type="text" id="text-message" name="enviar" class="form-control" placeholder="Digite aqui a sua mensagem.."></textarea>
+    	    <div class="row ">
+    	    	<form>
+    	    	<div class="col s10">
+    	    		<div class="input-field col s12">
+			            <textarea id="textarea"name="enviar" class="materialize-textarea" data-length="120" id="text-message"></textarea>
+			            <label for="textarea">Digite aqui</label>
+			         </div>
 	    		</div>
-	    	</div>
-	    	<div class="row p-1 ">
-    	    	<div class="col">
-    	    		<button id="enviar" type="submit" class="btn-secondary form-control">Enviar</button>
-	    	    </div>
+	    		<div class="col s2">
+	    		   <button id="enviar" class="btn waves-effect waves-light marginButton" type="submit" name="action">Enviar
+				      <i class="material-icons right">send</i>
+				   </button>
+				</div>
+				</form>
     	    </div>
-    	    </form>
-    	    
-    	 <!-- Aqui é o nosso botão para baixar o app -->
-            <div class="row">
-	        	<div class="col text-center">
-	        		<button type="submit"  class="add-button text-center">Baixe agora.</button>
-	        	</div>
-	        </div>
     	</div>   
-    </section>
-    <footer class="fixed-bottom">
-    	<div class="container-fluid">
-    		<div class="row footer-color py-1">
-    			<div class="col">
-    				<h6 class="text-center text-white">Gustavo San Martins</h6>
-    				<h6 class="text-center text-white">2020</h6>
-    			</div>
-    		</div>
-    	</div>
-    </footer>
+    </main>
+    <footer class="page-footer pretoFraco">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Chat do Hermena</h5>
+                <!-- Aqui é o nosso botão para baixar o app -->
+                <p class="grey-text text-lighten-4"><button type="submit"  class="waves-effect waves-light btn-small marginButton2 add-button">Baixe agora</button>&nbsp&nbsp&nbsp&nbsp Em desenvolvimento.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright preto">
+            <div class="container">
+            © 2020 Gustavo San Martins
+            <a class="grey-text text-lighten-4 right" href="https://github.com/gustavosandev">Meu GitHub</a>
+            </div>
+          </div>
+        </footer>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
 
-
+    <!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -129,7 +134,7 @@
     //////////////////
     var message = firebase.database().ref('message');
     message.on('child_added', function(data){
-    	$('#messages').append('<li>' + data.val().body + '</li>');
+    	$('#messages').append('<li class="collection-item">' + data.val().body + '</li>');
     })
 
     $('form').on('submit', function(){
@@ -137,23 +142,7 @@
     	$('#text-message').val('');
     })
 
-
-
-
-/*
-    firebaseConfig.on('child_added', function(snapshot) {
-        var data = snapshot.val();
-        $('#messages').append($('<li>').text(data.message));
-    });
-    
-    $('#enviar').click(function () {
-        var message = $('#text-message').val();
-        firebaseConfig.push({ message: message });
-        $('#text-message').val("");
-    });
-*/
-    
-
+   
 	</script>
   </body>
 </html>

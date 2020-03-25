@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) { //Verifica se consegue registrar o SW
-    navigator.serviceWorker.register('/FPWA/sw.js')
+    navigator.serviceWorker.register('/ChatDoHermena/sw.js')
       .then(function () {
         console.log('service worker registered');  
       })
